@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="audio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main" id="main" style="background-image: url(&quot;images/artworks-uiU4db5kZypo-0-t500x500.jpg&quot;);">
+    </div>
+    <div class="player">
+        <div class="row1" id="row1" style="background-image: url(&quot;images/artworks-uiU4db5kZypo-0-t500x500.jpg&quot;);">
+        </div>
+        <div class="songTitleWrapper">
+            <div class="songTitle"></div>
+        </div>
+        <div class="row2">
+            <div class="seek-bar">
+                <input type="range" class="track" step="0.2" style="background-size: 3.21611% 100%;">
+            </div>
+            <div class="time">
+                <div id="currentTime">00:00</div>
+                <div id="duration">00:00</div>
+            </div>
+            <div class="play">
+                <svg version="1.1" id="pre" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+				c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333
+				z"></path>
+                                <path d="M228.418,134.248c-8.331-8.331-21.839-8.331-30.17,0c-8.331,8.331-8.331,21.839,0,30.17L289.83,256l-91.582,91.582
+				c-8.331,8.331-8.331,21.839,0,30.17c8.331,8.331,21.839,8.331,30.17,0l106.667-106.667c8.331-8.331,8.331-21.839,0-30.17
+				L228.418,134.248z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 142.448 142.448" style="enable-background:new 0 0 142.448 142.448;" xml:space="preserve">
+                    <g>
+                        <path d="M142.411,68.9C141.216,31.48,110.968,1.233,73.549,0.038c-20.361-0.646-39.41,7.104-53.488,21.639
+		C6.527,35.65-0.584,54.071,0.038,73.549c1.194,37.419,31.442,67.667,68.861,68.861c0.779,0.025,1.551,0.037,2.325,0.037
+		c19.454,0,37.624-7.698,51.163-21.676C135.921,106.799,143.033,88.377,142.411,68.9z M111.613,110.336
+		c-10.688,11.035-25.032,17.112-40.389,17.112c-0.614,0-1.228-0.01-1.847-0.029c-29.532-0.943-53.404-24.815-54.348-54.348
+		c-0.491-15.382,5.122-29.928,15.806-40.958c10.688-11.035,25.032-17.112,40.389-17.112c0.614,0,1.228,0.01,1.847,0.029
+		c29.532,0.943,53.404,24.815,54.348,54.348C127.91,84.76,122.296,99.306,111.613,110.336z"></path>
+                        <path id="playBtnIcon" d="M94.585,67.086L63.001,44.44c-3.369-2.416-8.059-0.008-8.059,4.138v45.293
+		c0,4.146,4.69,6.554,8.059,4.138l31.583-22.647C97.418,73.331,97.418,69.118,94.585,67.086z"></path>
+                    </g>
+                </svg>
+                <svg version="1.1" id="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+				c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333
+				z"></path>
+                                <path d="M228.418,134.248c-8.331-8.331-21.839-8.331-30.17,0c-8.331,8.331-8.331,21.839,0,30.17L289.83,256l-91.582,91.582
+				c-8.331,8.331-8.331,21.839,0,30.17c8.331,8.331,21.839,8.331,30.17,0l106.667-106.667c8.331-8.331,8.331-21.839,0-30.17
+				L228.418,134.248z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="volumeMenu" style="height: 200px;">
+            <div class="volumeBar" style="display: flex;">
+                <input type="range" class="volHandle" style="background-size: 61% 100%; display: flex;">
+            </div>
+
+            <div class="volIcnContainer">
+                <svg version="1.1" id="volumeBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.519 191.519" style="enable-background:new 0 0 191.519 191.519;" xml:space="preserve">
+                    <g>
+                        <path d="M115.347,70.679c-2.929-2.929-7.678-2.93-10.606-0.001c-2.929,2.929-2.929,7.678,0,10.606
+        c7.98,7.981,7.98,20.968,0,28.949c-2.929,2.929-2.929,7.678,0,10.606c1.464,1.464,3.384,2.196,5.303,2.196s3.839-0.732,5.303-2.197
+        C129.176,107.01,129.176,84.508,115.347,70.679z" style="opacity: 1;"></path>
+                        <path d="M137.33,48.696c-2.929-2.928-7.678-2.928-10.606,0c-2.929,2.93-2.929,7.678,0,10.607
+        c20.102,20.102,20.102,52.811,0,72.912c-2.929,2.93-2.929,7.678,0,10.607c1.464,1.464,3.384,2.196,5.303,2.196
+        s3.839-0.732,5.303-2.196C163.28,116.872,163.28,74.647,137.33,48.696z" style="opacity: 1;"></path>
+                        <path d="M161.862,24.163c-2.928-2.927-7.677-2.929-10.606,0c-2.929,2.93-2.929,7.678,0,10.607
+        c16.291,16.291,25.263,37.951,25.263,60.989c0,23.039-8.972,44.699-25.263,60.989c-2.929,2.93-2.929,7.678,0,10.607
+        c1.464,1.464,3.384,2.196,5.303,2.196s3.839-0.732,5.303-2.196c19.124-19.124,29.656-44.551,29.656-71.597
+        C191.519,68.714,180.986,43.288,161.862,24.163z" style="opacity: 0;"></path>
+                        <path d="M84.962,19.612c-2.664-1.225-5.796-0.784-8.018,1.127L29.287,61.693H7.5c-4.142,0-7.5,3.357-7.5,7.5
+        v53.134c0,4.143,3.358,7.5,7.5,7.5h21.787l47.657,40.954c1.388,1.192,3.129,1.812,4.89,1.812c1.06,0,2.127-0.225,3.128-0.685
+        c2.664-1.223,4.371-3.885,4.371-6.815V26.427C89.333,23.497,87.625,20.834,84.962,19.612z M15,76.693h9.567v38.134H15V76.693z
+         M74.333,148.758l-34.766-29.876V72.637l34.766-29.876V148.758z"></path>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+    <script src="audio.js"></script>
+
+
+</body>
+
+</html>
